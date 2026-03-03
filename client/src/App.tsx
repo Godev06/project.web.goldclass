@@ -1,13 +1,13 @@
-import './App.css'
+import { useState } from "react"
+import Sidebar from "./layouts/SideBar.tsx"
 
-function App() {
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <p className="text-[10em] font-bold text-blue-600">
-        Tailwind ok 🎉
-      </p>
+    <div>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
